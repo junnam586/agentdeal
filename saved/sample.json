@@ -1,0 +1,196 @@
+{
+  "id": "sample",
+  "resource": "access to a curated APAC restaurant-pricing dataset",
+  "market_reference": 24.1,
+  "market_sources": [
+    "https://www.globaldata.com/store/report/apac-foodservice-market-analysis/",
+    "https://www.databridgemarketresearch.com/reports/asia-pacific-restaurant-pos-software-market?srsltid=AfmBOop-SqHgrgzpiA6AOccE2ikkiCXjF4en4Keulv7-0ctIQqDy0bZ7",
+    "https://www.technavio.com/report/food-service-market-in-apac-industry-analysis",
+    "https://datarade.ai/data-categories/restaurant-location-data/datasets"
+  ],
+  "final_price": 21.0,
+  "final_terms": {
+    "quantity": 1,
+    "delivery": "standard"
+  },
+  "winner": "seller_a",
+  "savings_pct": 12.9,
+  "transcript": [
+    {
+      "from": "buyer",
+      "identity": "did:t3n:acb77d1ac45a21aa1f8b0d0a07461db04aea3321",
+      "action": "broadcast",
+      "price": null,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "Procurement notice: I'm sourcing access to a curated APAC restaurant-pricing dataset to feed a live forecasting workload. The market reference for this resource is about $24 per Bright Data, so I expect bids to open near there and fall. Two vetted sellers are bidding, and I'm optimizing price against fitness-for-purpose, not just the lowest sticker. Open your books; the best combination of price and coverage takes the contract.",
+      "round": 1,
+      "ts": 1781338212.022142
+    },
+    {
+      "from": "seller_a",
+      "identity": "did:agentdeal:ref:262c7f3bd325a9af",
+      "action": "offer",
+      "price": 24.0,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "DataNorth opens at $24. What you're buying is recency: our APAC restaurant pricing refreshes every 24 hours, so your model never trains on last quarter's reality. Freshness here isn't a feature, it's the whole product. Even at open that sits under the $24 Bright Data reference.",
+      "round": 1,
+      "ts": 1781338212.022295
+    },
+    {
+      "from": "seller_b",
+      "identity": "did:agentdeal:ref:8d524b23fca4a87f",
+      "action": "offer",
+      "price": 25.0,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "GridSource opens at $25. Our edge is memory: a clean, normalized five-year APAC restaurant-pricing archive. If anything in your workload is seasonal, that history is what stops a model from overfitting to one noisy cycle. Even at open that sits under the $24 Bright Data reference.",
+      "round": 1,
+      "ts": 1781338212.022322
+    },
+    {
+      "from": "buyer",
+      "identity": "did:t3n:acb77d1ac45a21aa1f8b0d0a07461db04aea3321",
+      "action": "counter",
+      "price": 18.0,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "Two strong cases, but I run a budget, not a charity. DataNorth is lowest at $24, still above where the $24 market reference says this should land. For a live workload, fitness-for-purpose outweighs features I'll rarely query, so I'm anchoring at $18. Whoever closes the gap fastest earns the contract.",
+      "round": 1,
+      "ts": 1781338212.0223649
+    },
+    {
+      "from": "seller_a",
+      "identity": "did:agentdeal:ref:262c7f3bd325a9af",
+      "action": "counter",
+      "price": 22.0,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "We'll meet the pressure at $22. The archive across the table is deep, but depth without recency is just a confident wrong answer, and this number still keeps our daily pipeline funded while landing under the alternative.",
+      "round": 2,
+      "ts": 1781338212.022397
+    },
+    {
+      "from": "seller_b",
+      "identity": "did:agentdeal:ref:8d524b23fca4a87f",
+      "action": "counter",
+      "price": 23.0,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "I'll come to $23. Daily updates are easy to sell and hard to contextualize; without years of seasonality underneath, fresh data is a number with no baseline. You're paying for the baseline that makes the rest legible.",
+      "round": 2,
+      "ts": 1781338212.0224152
+    },
+    {
+      "from": "buyer",
+      "identity": "did:t3n:acb77d1ac45a21aa1f8b0d0a07461db04aea3321",
+      "action": "counter",
+      "price": 19.0,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "We're converging. DataNorth leads at $22 on both price and fit; the rest of the field is still over my line and over the $24 reference. I'll move to $19, a genuine number, not a tactic. Beat it and this gets signed today.",
+      "round": 2,
+      "ts": 1781338212.022431
+    },
+    {
+      "from": "seller_a",
+      "identity": "did:agentdeal:ref:262c7f3bd325a9af",
+      "action": "counter",
+      "price": 21.0,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "Final position: $21, the floor where daily refresh still pays for itself. Below it the updates stop and you're only buying history. Put live signal at this price against a five-year archive nobody has touched since spring and the call makes itself.",
+      "round": 3,
+      "ts": 1781338212.0224671
+    },
+    {
+      "from": "seller_b",
+      "identity": "did:agentdeal:ref:8d524b23fca4a87f",
+      "action": "counter",
+      "price": 22.0,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "$22, and that's GridSource sharpening to win: the long memory and a fair price on the same line. Recency you can bolt on later; five clean years of history you cannot manufacture overnight.",
+      "round": 3,
+      "ts": 1781338212.022488
+    },
+    {
+      "from": "buyer",
+      "identity": "did:t3n:acb77d1ac45a21aa1f8b0d0a07461db04aea3321",
+      "action": "accept",
+      "price": 21.0,
+      "terms": {
+        "quantity": 1,
+        "delivery": "standard"
+      },
+      "message": "Decided. DataNorth at $21, comfortably inside budget, below every opening bid on the table, and under the $24 Bright Data reference. The coverage fits the workload, so that's the one. I'm accepting now; let's settle and put both signatures on it.",
+      "round": 3,
+      "ts": 1781338212.022505
+    }
+  ],
+  "identities": {
+    "buyer": {
+      "label": "AgentDeal Buyer",
+      "ref": "did:t3n:acb77d1ac45a21aa1f8b0d0a07461db04aea3321",
+      "verified": true
+    },
+    "seller_a": {
+      "label": "DataNorth",
+      "ref": "did:agentdeal:ref:262c7f3bd325a9af",
+      "verified": false
+    },
+    "seller_b": {
+      "label": "GridSource",
+      "ref": "did:agentdeal:ref:8d524b23fca4a87f",
+      "verified": false
+    }
+  },
+  "models": {
+    "buyer": "kimi-k2.6",
+    "seller_a": "openai/gpt-5.4",
+    "seller_b": "anthropic/claude-sonnet-4.6"
+  },
+  "receipt": {
+    "buyer": {
+      "label": "AgentDeal Buyer",
+      "ref": "did:t3n:acb77d1ac45a21aa1f8b0d0a07461db04aea3321",
+      "verified": true
+    },
+    "seller": {
+      "label": "DataNorth",
+      "ref": "did:agentdeal:ref:262c7f3bd325a9af",
+      "verified": false
+    },
+    "price": 21.0,
+    "terms": {
+      "quantity": 1,
+      "delivery": "standard"
+    },
+    "signed_ref": "eip191:0x3E6A549497eDA6751200d6ee39D98f1676A188A1:51cbae63412593190eb117263ca097a90351552a8006f17ceba62ebfaa7fac3819e706c6a4d627976505181460853d2497a20e47cdf201c5db5dd2d6b46e060f1c",
+    "ts": 1781338212.0225139
+  },
+  "fulfillment": {
+    "output": "Queried APAC restaurant-pricing dataset in an isolated sandbox: 1,204 rows returned.\nsample: Tokyo \u00b7 Ramen Ichiban \u00b7 \u00a51,200 | Singapore \u00b7 Hawker Gold \u00b7 S$8.50 | Seoul \u00b7 Gangnam BBQ \u00b7 \u20a928,000",
+    "sandbox_id": "070e39aa-a40a-4694-aa15-e1b42c6577bf"
+  },
+  "forced_close": false
+}

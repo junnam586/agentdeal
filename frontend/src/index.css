@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* "The Broadsheet" palette (mirrors tailwind.config.js). */
+  --paper: #f2ede3;
+  --paper2: #ebe4d5;
+  --paper3: #e3dbc8;
+  --ink: #19150f;
+  --inksoft: #4c463a;
+  --buyer: #1c5566;
+  --seller: #9c3b2a;
+  --seal: #136a4a;
+  --trust: #3a357e;
+  --rule: #d6cebe;
+  --muted: #8b8170;
+}
+
+/* Paper lives on the canvas so it covers the ENTIRE scroll height, not just the
+   first viewport (otherwise the page falls through to white below the fold). */
+html {
+  height: 100%;
+  background-color: var(--paper);
+}
+
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--paper);
+  /* fixed so the warm vignette stays consistent the whole way down */
+  background-image:
+    radial-gradient(120% 70% at 50% -5%, rgba(255, 255, 255, 0.35), transparent 60%),
+    radial-gradient(90% 50% at 100% 100%, rgba(156, 59, 42, 0.04), transparent 65%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Printed-paper grain overlay. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4 {
+  font-family: "Fraunces", Georgia, serif;
+  font-optical-sizing: auto;
+  margin: 0;
+}
+
+/* --- editorial utilities --- */
+
+/* smallcaps kicker / dateline label */
+.kicker {
+  font-family: "Spline Sans Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.66rem;
+  color: var(--muted);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* newspaper hairline + double rules */
+.rule-t { border-top: 1px solid var(--rule); }
+.rule-b { border-bottom: 1px solid var(--rule); }
+.double-rule {
+  border-top: 3px double var(--ink);
+}
+.hair { background: var(--rule); }
+
+/* a dropcap for the lead dispatch */
+.dropcap::first-letter {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  float: left;
+  font-size: 3.1rem;
+  line-height: 0.8;
+  padding: 0.05em 0.12em 0 0;
+  color: var(--ink);
+}
+
+::selection {
+  background: rgba(28, 85, 102, 0.18);
+}
+
+:focus-visible {
+  outline: 2px solid var(--trust);
+  outline-offset: 2px;
+}
+
+.scroll-thin::-webkit-scrollbar { width: 9px; }
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 0;
+}
+.scroll-thin::-webkit-scrollbar-track { background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

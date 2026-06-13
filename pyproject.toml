@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentdeal"
+version = "0.1.0"
+description = "An open negotiation protocol and SDK for trusted agent-to-agent deals."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "AgentDeal contributors" }]
+keywords = ["agents", "negotiation", "protocol", "commerce", "ai"]
+dependencies = [
+    "pydantic>=2.5",
+    "httpx>=0.27",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+server = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "sse-starlette>=2.1",
+]
+terminal3 = [
+    # Verifiable EIP-191 settlement signing by the DID's authenticator key.
+    # (Terminal 3 identity itself goes through the Node sidecar, not Python.)
+    "eth-account>=0.11",
+]
+fulfillment = [
+    "daytona>=0.187",
+]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/agentdeal/agentdeal"
+Repository = "https://github.com/agentdeal/agentdeal"
+
+[tool.setuptools.packages.find]
+include = ["agentdeal*"]
+
+[tool.setuptools.package-data]
+agentdeal = ["py.typed"]

@@ -1,0 +1,10 @@
+{
+  "name": "agentdeal-terminal3",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Node sidecar: AgentDeal calls Terminal 3's t3n-sdk (Node-only) for real verified identity.",
+  "dependencies": {
+    "@terminal3/t3n-sdk": "latest"
+  }
+}

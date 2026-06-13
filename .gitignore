@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Env / secrets
+.env
+.env.local
+
+# Node / frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Saved negotiations are runtime artifacts; keep one curated sample, ignore the rest.
+saved/*.json
+!saved/sample.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.log
